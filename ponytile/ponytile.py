@@ -7,10 +7,10 @@
 # Copyright (c) 2012 Rémy Sanchez <remy.sanchez@hyperthese.net>
 # Under the terms of the WTFPL
 
-from __future__ import division
 
-import ConfigParser
-import floory
+
+import configparser
+from . import floory
 from os.path import dirname, abspath, normpath, relpath, join, exists, basename, splitext
 from glob import glob
 from math import ceil
@@ -150,7 +150,7 @@ class Ponytile(object):
         if not exists(filename):
             return None, "Missing file: %s" % filename
 
-        cfg = ConfigParser.ConfigParser(allow_no_value=True)
+        cfg = configparser.ConfigParser(allow_no_value=True)
         cfg.read([self._default_conf, filename])
 
         return cfg, None

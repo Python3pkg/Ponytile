@@ -8,4 +8,4 @@
 # Copyright (c) 2012 Rémy Sanchez <remy.sanchez@hyperthese.net>
 # Under the terms of the WTFPL
 
-from ponytile import Ponyitem, Ponytile
+from .ponytile import Ponyitem, Ponytile
